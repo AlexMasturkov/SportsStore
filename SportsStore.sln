@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.WebUI", "SpotsStore.WebUI\SportsStore.WebUI.csproj", "{59ED798C-85C2-41D7-85D2-7D78FE2B5396}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.Domain", "SportsStore.Domain\SportsStore.Domain.csproj", "{EBDC1545-834D-48EF-B834-2BE5AD8A3B72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59ED798C-85C2-41D7-85D2-7D78FE2B5396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59ED798C-85C2-41D7-85D2-7D78FE2B5396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59ED798C-85C2-41D7-85D2-7D78FE2B5396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59ED798C-85C2-41D7-85D2-7D78FE2B5396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBDC1545-834D-48EF-B834-2BE5AD8A3B72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBDC1545-834D-48EF-B834-2BE5AD8A3B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBDC1545-834D-48EF-B834-2BE5AD8A3B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBDC1545-834D-48EF-B834-2BE5AD8A3B72}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4EBD7305-E9DF-4DA4-8E0B-FEAF76963169}
+	EndGlobalSection
+EndGlobal
