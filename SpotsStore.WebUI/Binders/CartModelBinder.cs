@@ -6,8 +6,7 @@ namespace SpotsStore.WebUI.Binders
     public class CartModelBinder : IModelBinder
     {
         private const string sessionKey = "Cart";
-        public object BindModel(ControllerContext controllerContext,
-        ModelBindingContext bindingContext)
+        public object BindModel(ControllerContext controllerContext,ModelBindingContext bindingContext)
         {
             // get the Cart from the session
             Cart cart = (Cart)controllerContext.HttpContext.Session[sessionKey];
