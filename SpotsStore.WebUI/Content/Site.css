@@ -19,7 +19,7 @@ textarea {
 
 BODY {
     font-family: Cambria, Georgia, "Times New Roman";
-    margin: 0;
+    margin:1px;
 }
 
 DIV#header DIV.title, DIV.item H3, DIV.item H4, DIV.pager A {
