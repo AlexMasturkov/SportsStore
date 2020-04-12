@@ -1,10 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SportsStore.Domain.Entities
 {
@@ -31,7 +26,5 @@ namespace SportsStore.Domain.Entities
 
         [HiddenInput(DisplayValue = false)]
         public string ImageMimeType { get; set; }
-
     }
-
 }
