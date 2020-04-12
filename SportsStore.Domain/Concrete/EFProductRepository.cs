@@ -29,19 +29,7 @@ namespace SportsStore.Domain.Concrete
             }
             else
             {
-                //  context.Entry(product).State = System.Data.EntityState.Modified;
-
-
-                Product dbEntry = context.Products.Find(product.ProductID);
-                if(dbEntry != null)
-                {
-                    dbEntry.Name = product.Name;
-                    dbEntry.Description = product.Description;
-                    dbEntry.Price = product.Price;
-                    dbEntry.Category = product.Category;
-                    dbEntry.ImageData = product.ImageData;
-                    dbEntry.ImageMimeType = product.ImageMimeType;
-                }
+                 context.Entry(product).State = System.Data.Entity.EntityState.Modified;
             }
 
             context.SaveChanges();
