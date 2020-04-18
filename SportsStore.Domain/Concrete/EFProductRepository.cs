@@ -1,5 +1,4 @@
-﻿using System;
-using SportsStore.Domain.Abstract;
+﻿using SportsStore.Domain.Abstract;
 using SportsStore.Domain.Entities;
 using System.Linq;
 
