@@ -26,5 +26,18 @@ namespace SportsStore.Domain.Entities
 
         [HiddenInput(DisplayValue = false)]
         public string ImageMimeType { get; set; }
+
+        [HiddenInput(DisplayValue = true)] // this way the value will be displayed but can not be edited
+        public string ImageDataFileName { get; set; }
+
+       
+        public byte[] ProductData { get; set; }
+
+        [HiddenInput(DisplayValue = false)]
+        public string ProductMimeType { get; set; }
+
+        [HiddenInput(DisplayValue = true)] // this way the value will be displayed but can not be edited
+        public string ProductDataFileName { get; set; }
+
     }
 }

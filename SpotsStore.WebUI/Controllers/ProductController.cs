@@ -47,6 +47,19 @@ namespace SportsStore.WebUI.Controllers
                 return null;
             }
         }
+        public FileResult GetFileForDownload(int productId)
+        {
+            Product prod = repository.Products.FirstOrDefault(p => p.ProductID == productId);
+            if (prod != null)
+            {
+                return File(prod.ProductData, prod.ProductMimeType, prod.ProductDataFileName);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
 
         // GET: Product
         public ActionResult Index()

@@ -1,10 +1,30 @@
-﻿@{
+﻿@model SportsStore.Domain.Entities.Cart
+@{
     ViewBag.Title = "SportsStore: Order Submitted";
 }
 <h2>Thanks!</h2>
-
 <p>Thanks for placing your order. We'll ship your goods as soon as possible.</p>
+<p>Meanwhile please feel free to download soft copies of your purchase from links below.</p>
+@foreach (var Item in Model.Lines)
+{
+    <table id="tblForDownload">
+        <tr>
+            <td>
+                <img id="imgForDownload" src="@Url.Action("GetImage", "Product", new { productId = Item.Product.ProductID })" />
+            </td>
+            <td>
+                <div class="actionButtonsForDownload">
+                    @Html.ActionLink("download " + Item.Product.Name, "GetFileForDownload", "Product", new { productId = Item.Product.ProductID }, null)
+                </div>
+            </td>
+        </tr>
+    </table>
+    <br />
+}
 
+@{
+    Model.Clear();
+}
 
 
 

@@ -78,8 +78,8 @@ namespace SpotsStore.WebUI.Controllers
             if (ModelState.IsValid)
             {
                 orderProcessor.ProcessOrder(cart, shippingDetails);
-                cart.Clear();
-                return View("Completed");
+                //cart.Clear();
+                return View("Completed",cart);
             }
             else
             {

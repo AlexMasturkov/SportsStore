@@ -7,7 +7,7 @@
 
 
 <h1>Edit @Model.Name</h1>
-@using (Html.BeginForm("Edit", "Admin",FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Edit", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.EditorForModel()
     <div class="editor-label">Image</div>
@@ -21,11 +21,35 @@
             <img width="150" height="150"
                  src="@Url.Action("GetImage", "Product", new { Model.ProductID })" />
         }
-        <div>Upload new image: <input type="file" name="Image" /></div>
+        @*<div>Upload new image: <input type="file" name="Image" /></div>*@
     </div>
+    <div class="editor-label">Product Data File</div>
+    <div class="editor-field">
+        <div class="actionButtonsForDownload">
+            @if (Model.ProductData == null)
+            {
+                @:None
+            }
+            else
+            {
+                @Html.ActionLink("Download: " + Model.ProductDataFileName, "GetFileForDownload", "Product", new { productId = Model.ProductID }, null)
+            }
+        </div>
+    </div>
+
+    <input id="ImageData" name="ImageData" type="hidden" value=@(Model.ImageData == null ? Html.Raw("\"\"") : Html.Raw(Convert.ToBase64String(Model.ImageData))) />
+    <input id="ProductData" name="ProductData" type="hidden" value=@(Model.ProductData == null ? Html.Raw("\"\"") : Html.Raw(Convert.ToBase64String(Model.ProductData))) />
+
+
+    <div class="editor-label">Upload new image </div>
+    <div class="editor-field"><input type="file" name="Image" /></div>
+
+    <div class="editor-label">Upload new Product Data File </div>
+    <div class="editor-field"><input type="file" name="ProductDataFile" /></div>
     <input type="submit" value="Save" />
     @Html.ActionLink("Cancel and return to List", "Index")
 }
+
 
 
 

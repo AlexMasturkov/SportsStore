@@ -170,3 +170,36 @@ DIV#cart {
         border: 1px solid black;
     }
 
+/* Styles for Download
+-----------------------------------------------------------*/
+#tblForDownload {
+    border-style: solid;
+    border-width: 1px;
+    border-color: Olive;
+    border-radius: 5px 10px 5px 10px / 10px 5px 10px 5px;
+    width: 400px;
+    width: 400px;
+}
+
+    #tblForDownload td {
+        width: 200px;
+    }
+
+#imgForDownload {
+    padding-left: 10px;
+    height: 75px;
+}
+
+.actionButtonsForDownload A
+{ 
+  text-align:left;
+  font: .8em Arial; 
+  color: White; 
+  text-decoration: none; 
+  padding: .15em 1.5em .2em 1.5em;
+  background-color: #353535; 
+  border: 1px solid black;   
+}
+
+
+
